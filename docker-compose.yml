@@ -1,0 +1,12 @@
+version: '3'
+services:
+  dnsserver:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "0.0.0.0:53:53/udp"
+    volumes:
+      - ./micropython_captive_dns_server:/code
+    working_dir: "/code"
+    #entrypoint: ["tail", "-f", "/dev/null"]
