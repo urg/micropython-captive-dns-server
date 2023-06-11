@@ -1,14 +1,11 @@
-name: pypi-publish
-on:
-  push:
-    branches:
-      - main
+name: pypi-publish-test
+on: workflow_dispatch
 jobs:
     pypi-publish:
-      name: upload release to PyPI
+      name: upload release to PyPI Test
       runs-on: ubuntu-latest
       environment: 
-        name: pypi-release
+        name: pypi-test
       permissions:
         # IMPORTANT: this permission is mandatory for trusted publishing
         id-token: write
@@ -17,3 +14,5 @@ jobs:
   
         - name: Publish package distributions to PyPI
           uses: pypa/gh-action-pypi-publish@release/v1
+          with:
+            repository-url: https://test.pypi.org/legacy/
