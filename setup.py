@@ -1,5 +1,4 @@
-import setuptools
+from setuptools import setup
 
-setuptools.setup(
-    package_dir = {"": "micropython_captive_dns_server"}
-)
+if __name__ == '__main__':
+    setup()
