@@ -1,6 +1,34 @@
 [build-system]
 requires = [
-    "setuptools>=42",
-    "wheel"
+    "setuptools>=61.0"
 ]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "micropython-captive-dns-server"
+version = "0.0.1.dev"
+description = "Micropython asyncio simplistic dns server for use with captive portals"
+classifiers = [
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: Implementation :: MicroPython",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+authors = [
+    { name = "Patrick McAndrew", email="patrick@urg.name" }
+]
+readme = {file = "README.md", content-type = "text/markdown"}
+dependencies = [
+  "uasyncio"
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/urg/micropython-captive-dns-server"
+Repository = "https://github.com/urg/micropython-captive-dns-server"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["micropython_captive_dns_server"]
