@@ -1,6 +1,6 @@
 import usocket as socket
 import uasyncio as asyncio
-from packet import DNSPacket
+from micropython_captive_dns_server.packet import DNSPacket
 import gc
 
 
